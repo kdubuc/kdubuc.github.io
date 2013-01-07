@@ -88,9 +88,27 @@ textarea {
 @color3: #e89063;
 @color4: #bf5656;
 
+/* Entypo */
+@font-face {
+    font-family: 'EntypoRegular';
+    src: url('entypo/entypo.eot');
+    src: url('entypo/entypo.eot?#iefix') format('embedded-opentype'),
+         url('entypo/entypo.woff') format('woff'),
+         url('entypo/entypo.ttf') format('truetype'),
+         url('entypo/entypo.svg#EntypoRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.icon {
+	font-family: 'EntypoRegular';
+	font-size: 4em;
+	line-height: .5em;
+}
+
 body {
 	font-family: "ff-nuvo-web-pro",sans-serif;
-	font-size: 0.7em;
+	font-size: 0.6em;
 
 	background-color: @color1;
 	
@@ -260,6 +278,10 @@ footer {
     /* Style adjustments for viewports that meet the condition */
 	body {
 		font-size: 1em;
+	}
+	
+	footer {
+		#device #mobile { .hidden }
 	}
 }
 
