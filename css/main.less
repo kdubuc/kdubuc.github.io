@@ -18,10 +18,6 @@ textarea {
     color: #222;
 }
 
-body {
-    line-height: 1.4;
-}
-
 /*
  * Remove text-shadow in selection highlight: h5bp.com/i
  * These selection declarations have to be separate.
@@ -101,13 +97,13 @@ textarea {
 
 .icon {
 	font-family: 'EntypoRegular';
-	font-size: 4em;
+	font-size: 1em;
 	line-height: .5em;
 }
 
 body {
 	font-family: "ff-nuvo-web-pro",sans-serif;
-	font-size: 75%;
+	line-height: 1.4;
 
 	background-color: @color1;
 	
@@ -123,25 +119,19 @@ header {
 	color: #FFF;
 
 	h1 {
-		margin: 0em;
-		padding: 0.5em;
-
-		font-size: 4em;
-		
 		.subcolortitle {
 			color: @color3;
 		}
 		
 		.subtitle {
 			display: block;
-			
 			font-size: 0.5em;
 		}
 	}
 }
 
 div#content {
-	padding: 2em 3em;
+	padding: 2em 1em;
 
 	background-color: @basecolor;
 	
@@ -265,101 +255,4 @@ footer {
 
 .clearfix {
     *zoom: 1;
-}
-
-/* ==========================================================================
-   EXAMPLE Media Queries for Responsive Design.
-   Theses examples override the primary ('mobile first') styles.
-   Modify as content requires.
-   ========================================================================== */
-
-@media only screen and (min-width: 35em) {
-    /* Style adjustments for viewports that meet the condition */
-	body {
-		font-size: 100%;
-	}
-	
-	footer {
-		#device #mobile { .hidden }
-	}
-}
-
-@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
-       only screen and (min-resolution: 144dpi) {
-    /* Style adjustments for high resolution devices */
-	body {
-		font-size: 125%;
-	}
-}
-
-/* ==========================================================================
-   Print styles.
-   Inlined to avoid required HTTP connection: h5bp.com/r
-   ========================================================================== */
-
-@media print {
-    * {
-        background: transparent !important;
-        color: #000 !important; /* Black prints faster: h5bp.com/s */
-        box-shadow: none !important;
-        text-shadow: none !important;
-    }
-
-    a,
-    a:visited {
-        text-decoration: underline;
-    }
-
-    a[href]:after {
-        content: " (" attr(href) ")";
-    }
-
-    abbr[title]:after {
-        content: " (" attr(title) ")";
-    }
-
-    /*
-     * Don't show links for images, or javascript/internal links
-     */
-
-    .ir a:after,
-    a[href^="javascript:"]:after,
-    a[href^="#"]:after {
-        content: "";
-    }
-
-    pre,
-    blockquote {
-        border: 1px solid #999;
-        page-break-inside: avoid;
-    }
-
-    thead {
-        display: table-header-group; /* h5bp.com/t */
-    }
-
-    tr,
-    img {
-        page-break-inside: avoid;
-    }
-
-    img {
-        max-width: 100% !important;
-    }
-
-    @page {
-        margin: 0.5cm;
-    }
-
-    p,
-    h2,
-    h3 {
-        orphans: 3;
-        widows: 3;
-    }
-
-    h2,
-    h3 {
-        page-break-after: avoid;
-    }
 }
