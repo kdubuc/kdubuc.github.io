@@ -79,17 +79,6 @@ textarea {
 }
 
 /* ==========================================================================
-   Chrome Frame prompt
-   ========================================================================== */
-
-.chromeframe {
-    margin: 0.2em 0;
-    background: #ccc;
-    color: #000;
-    padding: 0.2em 0;
-}
-
-/* ==========================================================================
    Custom styles
    ========================================================================== */
 
@@ -100,26 +89,63 @@ textarea {
 @color4: #bf5656;
 
 body {
-	background-color: @basecolor;
+	font-family: "ff-nuvo-web-pro",sans-serif;
+	font-size: 0.7em;
+
+	background-color: @color1;
+	
+	a {
+		color: @color2;
+		text-decoration: none;
+	}
+	
 }
 
 header {
 	text-align: center;
 	color: #FFF;
-	
-	background-color: @color1;
-	
+
 	h1 {
 		margin: 0px;
 		padding: 1em;
 
-		font-size: 3rem;
+		font-size: 4em;
+		
+		.subcolortitle {
+			color: @color3;
+		}
 		
 		.subtitle {
 			display: block;
 			
 			font-size: 0.5em;
 		}
+	}
+}
+
+div#content {
+	padding: 2em 3em;
+
+	background-color: @basecolor;
+	
+	h2 {
+		padding: .25em;
+	
+		color: #FFF;
+		text-align: center;
+		
+		background-color: @color3;
+	}
+}
+
+footer {
+	padding: .75em;
+
+	text-align: center;
+	color: #FFF;
+	
+	.subfooter {
+		font-size: 0.8em;
 	}
 }
    
@@ -232,11 +258,17 @@ header {
 
 @media only screen and (min-width: 35em) {
     /* Style adjustments for viewports that meet the condition */
+	body {
+		font-size: 1em;
+	}
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5),
        only screen and (min-resolution: 144dpi) {
     /* Style adjustments for high resolution devices */
+	body {
+		font-size: 1.5em;
+	}
 }
 
 /* ==========================================================================
