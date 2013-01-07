@@ -90,25 +90,39 @@ textarea {
 }
 
 /* ==========================================================================
-   Author's custom styles
+   Custom styles
    ========================================================================== */
 
+@basecolor: #efeac5;
+@color1: #312f40;
+@color2: #49a69c;
+@color3: #e89063;
+@color4: #bf5656;
 
+body {
+	background-color: @basecolor;
+}
 
+header {
+	text-align: center;
+	color: #FFF;
+	
+	background-color: @color1;
+	
+	h1 {
+		margin: 0px;
+		padding: 1em;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+		font-size: 3rem;
+		
+		.subtitle {
+			display: block;
+			
+			font-size: 0.5em;
+		}
+	}
+}
+   
 /* ==========================================================================
    Helper classes
    ========================================================================== */
