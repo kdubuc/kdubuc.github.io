@@ -1,3 +1,3 @@
-[submodule "css/jUSTScale"]
-	path = css/jUSTScale
+[submodule "css/vendor/jUSTScale"]
+	path = css/vendor/jUSTScale
 	url = git@github.com:kdubuc/jUSTScale.git
