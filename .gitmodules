@@ -1,0 +1,3 @@
+[submodule "css/jUSTScale"]
+	path = css/jUSTScale
+	url = git@github.com:kdubuc/jUSTScale.git
