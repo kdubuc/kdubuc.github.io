@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "bootstrap": "2.*.*",
+    "less.js": "1.*.*",
+    "modernizr": "2.*.*"
+  }
+}

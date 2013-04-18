@@ -1,258 +1,129 @@
-/*
- * HTML5 Boilerplate
- *
- * What follows is the result of much research on cross-browser styling.
- * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
- * Kroc Camen, and the H5BP dev community and team.
- */
+/* import less files */
+@import "../components/bootstrap/less/bootstrap.less";
 
-/* ==========================================================================
-   Base styles: opinionated defaults
-   ========================================================================== */
+/* variables */
+@footer-height: 100px;
 
-html,
-button,
-input,
-select,
-textarea {
-    color: #222;
-}
 
-/*
- * Remove text-shadow in selection highlight: h5bp.com/i
- * These selection declarations have to be separate.
- * Customize the background color to match your design.
- */
+/* general style*/
 
-::-moz-selection {
-    background: #b3d4fc;
-    text-shadow: none;
-}
-
-::selection {
-    background: #b3d4fc;
-    text-shadow: none;
-}
-
-/*
- * A better looking default horizontal rule
- */
-
-hr {
-    display: block;
-    height: 1px;
-    border: 0;
-    border-top: 1px solid #ccc;
-    margin: 1em 0;
-    padding: 0;
-}
-
-/*
- * Remove the gap between images and the bottom of their containers: h5bp.com/i/440
- */
-
-img {
-    vertical-align: middle;
-}
-
-/*
- * Remove default fieldset styles.
- */
-
-fieldset {
-    border: 0;
-    margin: 0;
-    padding: 0;
-}
-
-/*
- * Allow only vertical resizing of textareas.
- */
-
-textarea {
-    resize: vertical;
-}
-
-/* ==========================================================================
-   Custom styles
-   ========================================================================== */
-
-@basecolor: #efeac5;
-@color1: #312f40;
-@color2: #49a69c;
-@color3: #e89063;
-@color4: #bf5656;
-
-/* Entypo */
-@font-face {
-    font-family: 'EntypoRegular';
-    src: url('entypo/entypo.eot');
-    src: url('entypo/entypo.eot?#iefix') format('embedded-opentype'),
-         url('entypo/entypo.woff') format('woff'),
-         url('entypo/entypo.ttf') format('truetype'),
-         url('entypo/entypo.svg#EntypoRegular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-
-.icon {
-	font-family: 'EntypoRegular';
-	font-size: 1em;
-	line-height: .5em;
+html {
+    position: relative;
+    min-height: 100%;
 }
 
 body {
-	font-family: "ff-nuvo-web-pro",sans-serif;
-	line-height: 1.4;
-
-	background-color: @color1;
-	
-	a {
-		color: @color2;
-		text-decoration: none;
-	}
-	
+    background: #EEE url("../img/background.jpg") no-repeat center center fixed;
+    .background-size(cover);
+    color: white;
+    font-family : "Proxima N W02 Bold",Helvetica,Arial,sans-serif;
+    margin: 0 0 @footer-height;
 }
 
-header {
-	text-align: center;
-	color: #FFF;
-
-	h1 {
-		.subcolortitle {
-			color: @color3;
-		}
-		
-		.subtitle {	
-			display: block;
-			font-size: 0.45em;
-		}
-	}
+header h1 {
+    height: 50px;
+    font-size: 2em;
 }
 
-div#content {
-	padding: 2em 1em;
+header img {
+    vertical-align: middle;
+}
 
-	background-color: @basecolor;
-	
-	h2 {
-		padding: .25em;
-	
-		color: #FFF;
-		text-align: center;
-		
-		background-color: @color3;
-	}
+.content {
+    text-align: center;
+
+}
+
+.content h1 {
+    font-weight: normal;
+    font-size: 5.5em;
+    margin-bottom: .5em;
+    line-height: 1.1;
+}
+
+.content a.btn {
+    padding: 1em 1.5em;
+    font-size: 1.8em;
+    margin-bottom: 1.5em;
+    .border-radius(6px);
 }
 
 footer {
-	padding: .75em;
-
-	text-align: center;
-	color: #FFF;
-	
-	.subfooter {
-		font-size: 0.8em;
-	}
-}
-   
-/* ==========================================================================
-   Helper classes
-   ========================================================================== */
-
-/*
- * Image replacement
- */
-
-.ir {
-    background-color: transparent;
-    border: 0;
-    overflow: hidden;
-    /* IE 6/7 fallback */
-    *text-indent: -9999px;
-}
-
-.ir:before {
-    content: "";
-    display: block;
-    width: 0;
-    height: 100%;
-}
-
-/*
- * Hide from both screenreaders and browsers: h5bp.com/u
- */
-
-.hidden {
-    display: none !important;
-    visibility: hidden;
-}
-
-/*
- * Hide only visually, but have it available for screenreaders: h5bp.com/v
- */
-
-.visuallyhidden {
-    border: 0;
-    clip: rect(0 0 0 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
+    font-size: .75em;
+    text-align: center;  
     position: absolute;
-    width: 1px;
+    left: 0;
+    bottom: 0;
+    height: @footer-height;
+    width: 100%;
+    padding: 0 20px;
+    .box-sizing(border-box);
 }
 
-/*
- * Extends the .visuallyhidden class to allow the element to be focusable
- * when navigated to via the keyboard: h5bp.com/p
- */
+/* responsive */
 
-.visuallyhidden.focusable:active,
-.visuallyhidden.focusable:focus {
-    clip: auto;
-    height: auto;
-    margin: 0;
-    overflow: visible;
-    position: static;
-    width: auto;
+/* Large desktop */
+@media (min-width: 1200px) {
+    header {
+        margin: 50px 0 0 50px;
+    }
+    .box {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        height: 400px;
+        width: 60%; 
+    }
 }
-
-/*
- * Hide visually and from screenreaders, but maintain layout
- */
-
-.invisible {
-    visibility: hidden;
+ 
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 1199px) {
+    header {
+        margin: 25px 0 0 25px;
+    }
+    .content {
+        margin-top: 30px;
+    }
+    .box {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        height: 400px;
+        width: 60%; 
+    }
 }
-
-/*
- * Clearfix: contain floats
- *
- * For modern browsers
- * 1. The space content is one way to avoid an Opera bug when the
- *    `contenteditable` attribute is included anywhere else in the document.
- *    Otherwise it causes space to appear at the top and bottom of elements
- *    that receive the `clearfix` class.
- * 2. The use of `table` rather than `block` is only necessary if using
- *    `:before` to contain the top-margins of child elements.
- */
-
-.clearfix:before,
-.clearfix:after {
-    content: " "; /* 1 */
-    display: table; /* 2 */
+ 
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+    header {
+        margin-top: 50px;
+        text-align: center;
+    }
+    .box {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        height: 600px;
+        width: 80%; 
+    }
 }
-
-.clearfix:after {
-    clear: both;
-}
-
-/*
- * For IE 6/7 only
- * Include this rule to trigger hasLayout and contain floats.
- */
-
-.clearfix {
-    *zoom: 1;
+ 
+/* Landscape phones and down */
+@media (max-width: 480px) {
+    .content {
+        font-size: 0.5em;
+        margin-top: 15px;
+    }
+    footer {
+        font-size: .5em;
+    }
 }
