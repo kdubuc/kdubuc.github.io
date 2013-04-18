@@ -32,7 +32,6 @@ header img {
 
 .content {
     text-align: center;
-
 }
 
 .box {
@@ -42,7 +41,7 @@ header img {
     left: 0;
     right: 0;
     margin: auto;
-    height: 50%;
+    height: 45%;
     width: 70%; 
 }
 
@@ -76,18 +75,15 @@ footer {
 
 /* Large desktop */
 @media (min-width: 1200px) {
-    header {
-        margin: 50px 0 0 50px;
+    div.container-fluid {
+        margin: 50px;
     }
 }
  
 /* Portrait tablet to landscape and desktop */
 @media (min-width: 768px) and (max-width: 1199px) {
-    header {
-        margin: 25px 0 0 25px;
-    }
-    .content {
-        margin-top: 30px;
+    div.container-fluid {
+        margin: 25px;
     }
 }
  
@@ -97,6 +93,10 @@ footer {
         margin-top: 50px;
         text-align: center;
     }
+    .content {
+        font-size: .7em;
+        margin-top: 15px;
+    }
 }
  
 /* Landscape phones and down */
@@ -105,8 +105,9 @@ footer {
         font-size: 0.4em;
         margin-top: 15px;
     }
-    footer {
-        font-size: .5em;
+    .content a.btn {
+        padding: 10px;
+        font-size: 2.3em;
     }
     .box {
         width: 90%; 
