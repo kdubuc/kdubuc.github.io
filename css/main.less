@@ -2,7 +2,7 @@
 @import "../components/bootstrap/less/bootstrap.less";
 
 /* variables */
-@footer-height: 100px;
+@footer-height: 75px;
 
 
 /* general style*/
@@ -32,6 +32,17 @@ header img {
 .content {
     text-align: center;
 
+}
+
+.box {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    height: 50%;
+    width: 70%; 
 }
 
 .content h1 {
@@ -67,16 +78,6 @@ footer {
     header {
         margin: 50px 0 0 50px;
     }
-    .box {
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        margin: auto;
-        height: 400px;
-        width: 60%; 
-    }
 }
  
 /* Portrait tablet to landscape and desktop */
@@ -87,16 +88,6 @@ footer {
     .content {
         margin-top: 30px;
     }
-    .box {
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        margin: auto;
-        height: 400px;
-        width: 60%; 
-    }
 }
  
 /* Landscape phone to portrait tablet */
@@ -105,25 +96,18 @@ footer {
         margin-top: 50px;
         text-align: center;
     }
-    .box {
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        margin: auto;
-        height: 600px;
-        width: 80%; 
-    }
 }
  
 /* Landscape phones and down */
 @media (max-width: 480px) {
     .content {
-        font-size: 0.5em;
+        font-size: 0.4em;
         margin-top: 15px;
     }
     footer {
         font-size: .5em;
+    }
+    .box {
+        width: 90%; 
     }
 }
