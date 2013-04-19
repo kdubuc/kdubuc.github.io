@@ -1,0 +1,1 @@
+lessc -o css/main.less css/main.min.css
