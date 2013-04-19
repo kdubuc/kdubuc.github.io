@@ -22,11 +22,15 @@ html {
 }
 
 body {
-    background: #EEE url("../img/background.jpg") no-repeat center center fixed;
-    .background-size(cover);
+    background-color: #5ebfb5;
     color: white;
     font-family : "Proxima N W02 Bold",Helvetica,Arial,sans-serif;
     overflow: hidden;
+}
+
+html.backgroundsize body {
+    background: #EEE url("../img/background.jpg") no-repeat center center fixed;
+    .background-size(cover);
 }
 
 header h1 {
@@ -91,6 +95,9 @@ footer {
 @media (min-width: 768px) and (max-width: 1199px) {
     div.container-fluid {
         margin: 25px;
+    }
+    .content {
+        font-size: .7em;
     }
 }
  
