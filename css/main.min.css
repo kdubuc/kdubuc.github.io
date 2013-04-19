@@ -5268,7 +5268,7 @@ body {
   overflow: hidden;
 }
 html.backgroundsize body {
-  background: #eeeeee url("../img/background.jpg") no-repeat center center fixed;
+  background: #eeeeee url("../img/background.jpg") no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -5283,6 +5283,7 @@ header img {
 }
 .content {
   text-align: center;
+  z-index: 1;
 }
 .box {
   position: absolute;
@@ -5350,8 +5351,12 @@ footer {
     text-align: center;
   }
   .content {
-    font-size: .6em;
+    font-size: .5em;
     margin-top: 15px;
+  }
+  .content a.btn {
+    padding: 10px;
+    font-size: 2.4em;
   }
   body {
     margin: 0 0 55px;
@@ -5367,7 +5372,7 @@ footer {
     margin-top: 15px;
   }
   .content a.btn {
-    padding: 10px;
+    padding: 7px;
     font-size: 2.3em;
   }
   .box {

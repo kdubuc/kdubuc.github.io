@@ -29,7 +29,7 @@ body {
 }
 
 html.backgroundsize body {
-    background: #EEE url("../img/background.jpg") no-repeat center center fixed;
+    background: #EEE url("../img/background.jpg") no-repeat center center;
     .background-size(cover);
 }
 
@@ -44,6 +44,7 @@ header img {
 
 .content {
     text-align: center;
+    z-index: 1;
 }
 
 .box {
@@ -110,8 +111,12 @@ footer {
         text-align: center;
     }
     .content {
-        font-size: .6em;
+        font-size: .5em;
         margin-top: 15px;
+    }
+    .content a.btn {
+        padding: 10px;
+        font-size: 2.4em;
     }
     .footer-height(55px);
 }
@@ -123,7 +128,7 @@ footer {
         margin-top: 15px;
     }
     .content a.btn {
-        padding: 10px;
+        padding: 7px;
         font-size: 2.3em;
     }
     .box {
