@@ -5378,4 +5378,10 @@ footer {
   .box {
     width: 90%;
   }
+  body {
+    margin: 0 0 55px;
+  }
+  footer {
+    height: 55px;
+  }
 }
