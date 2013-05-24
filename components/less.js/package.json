@@ -1,6 +1,6 @@
 {
   "name": "less",
-  "version": "1.4.0-b2",
+  "version": "1.4.0-b4",
   "description": "Leaner CSS",
   "homepage": "http://lesscss.org",
   "author": "Alexis Sellier <self@cloudhead.net>",
@@ -63,5 +63,11 @@
     "stylesheet",
     "variables in css",
     "css less"
+  ],
+  "licenses": [
+    {
+      "type": "Apache v2",
+      "url": "https://github.com/cloudhead/less.js/blob/master/LICENSE"
+    }
   ]
 }

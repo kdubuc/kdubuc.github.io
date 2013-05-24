@@ -214,7 +214,7 @@ function extractUrlParts(url, baseUrl) {
         if (!baseUrlParts) {
             throw new Error("Could not parse page url - '"+baseUrl+"'");
         }
-        urlParts[1] = baseUrlParts[1];
+        urlParts[1] = urlParts[1] || baseUrlParts[1] || "";
         if (!urlParts[2]) {
             urlParts[3] = baseUrlParts[3] + urlParts[3];
         }
@@ -222,6 +222,14 @@ function extractUrlParts(url, baseUrl) {
     
     if (urlParts[3]) {
         directories = urlParts[3].replace("\\", "/").split("/");
+
+        // extract out . before .. so .. doesn't absorb a non-directory
+        for(i = 0; i < directories.length; i++) {
+            if (directories[i] === ".") {
+                directories.splice(i, 1);
+                i -= 1;
+            }
+        }
 
         for(i = 0; i < directories.length; i++) {
             if (directories[i] === ".." && i > 0) {

@@ -260,6 +260,9 @@ less.Parser = function Parser(env) {
         ];
     }
 
+    LessError.prototype = new Error();
+    LessError.prototype.constructor = LessError;
+
     this.env = env = env || {};
 
     // The optimization level dictates the thoroughness of the parser,
@@ -414,15 +417,15 @@ less.Parser = function Parser(env) {
                             .run(evaldRoot);
 
                         var css = evaldRoot.toCSS({
-                                compress: options.compress || false,
+                                compress: Boolean(options.compress),
                                 dumpLineNumbers: env.dumpLineNumbers,
-                                strictUnits: options.strictUnits === false ? false : true});
+                                strictUnits: Boolean(options.strictUnits)});
                     } catch (e) {
                         throw new(LessError)(e, env);
                     }
 
                     if (options.yuicompress && less.mode === 'node') {
-                        return require('ycssmin').cssmin(css);
+                        return require('ycssmin').cssmin(css, options.maxLineLen);
                     } else if (options.compress) {
                         return css.replace(/(\s)+/g, "$1");
                     } else {
