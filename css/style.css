@@ -1,0 +1,42 @@
+@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+html {
+    min-height: 100%;
+}
+
+body {
+  /* background: #3498db url("../img/background.jpg") no-repeat center center; */
+  background: #3498db;
+  background-size: cover;
+  color: white;
+  font-family : "Montserrat","Proxima N W02 Bold",Helvetica,Arial,sans-serif;
+}
+
+h1 {
+  font-size: 32px;
+  font-weight: 400;
+  text-shadow: 0 2px 0 rgba( 0, 0, 0, 0.05 );
+  margin-top: 20%;
+  margin-bottom: 40px;
+}
+
+ul#links li {
+  padding: 0 8px;
+}
+
+ul#links a {
+  font-size: 20px;
+  text-shadow: none;
+  color: white;
+  opacity: .6;
+}
+
+ul#links a:hover {
+  opacity: .8;
+}
+
+#do {
+  background: rgba( 0, 0, 0, 0.1 );
+  padding: 0 12px;
+  border-radius: 2px;
+}
