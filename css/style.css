@@ -2,11 +2,11 @@
 
 html {
     min-height: 100%;
+    overflow: hidden;
 }
 
 body {
-  /* background: #3498db url("../img/background.jpg") no-repeat center center; */
-  background: #3498db;
+  background: #3498db url("../img/background.png") no-repeat center center;
   background-size: cover;
   color: white;
   font-family : "Montserrat","Proxima N W02 Bold",Helvetica,Arial,sans-serif;
