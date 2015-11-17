@@ -3,6 +3,7 @@ $(document).ready(function() {
   var actions = [
     'play video games',
     'jog',
+    'create apps',
     'check twitter',
     'buy compulsively on amazon'
   ];
