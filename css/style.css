@@ -47,3 +47,16 @@ ul#links li a:hover {
     padding: 0 12px;
     border-radius: 2px;
 }
+
+#modal-fingerprint .modal-content {
+    background: none;
+    box-shadow: none;
+    border: none;
+    text-align: center;
+}
+
+#modal-fingerprint .modal-body {
+    color: white;
+    background: rgba( 255, 255, 255, .1 );
+    border-radius: 2px;
+}
