@@ -1,0 +1,1490 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <title>Kévin DUBUC</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+      /********************************************
+* 	reset from
+* 	http://meyerweb.com/eric/tools/css/reset/
+*******************************************/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/****************
+*	COMMONS
+****************/
+
+body,
+html {
+  font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-size: 13px;
+  color: #40484f;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.46153846;
+  text-align: left;
+}
+
+p {
+  display: block;
+}
+
+a {
+  color: #0095ff;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #0c65a5;
+  text-decoration: underline;
+}
+
+li {
+  list-style-type: square;
+  list-style-position: outside;
+  margin-left: 1.3em;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.67rem;
+}
+
+h3 {
+  font-size: 1.27rem;
+}
+
+em {
+  color: #757575;
+}
+
+strong {
+  font-weight: 700;
+}
+
+/* main container */
+
+#resume {
+  padding: 1.5rem;
+}
+
+/* every section wrapper */
+
+.section {
+  margin-bottom: 1rem;
+}
+
+section .location {
+  margin-right: 0.5em;
+  color: #606d76;
+  font-weight: 700;
+}
+
+#contact {
+  margin-top: 0.5rem;
+}
+
+#profiles .item {
+  padding: 0;
+}
+
+#header {
+  margin-bottom: 1rem;
+}
+
+#header > #profiles,
+#header > #contact,
+#skills,
+#languages,
+#interests {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+}
+
+#header > div {
+  line-height: 1.5;
+}
+
+#header > div > div {
+  margin-right: 1.2em;
+}
+
+#header h1.name {
+  font-size: 2.8rem;
+  font-weight: 100;
+  line-height: 100%;
+}
+
+#header h2.label {
+  color: #202931;
+  font-size: 1.47rem;
+  font-weight: 300;
+}
+
+#header .image {
+  width: 11em;
+  float: right;
+  border-radius: 4px;
+}
+
+.section.summary header {
+  margin-top: 1rem;
+}
+
+.main-summary {
+  background: #f1f8ff;
+  padding: 1.2em 1em;
+}
+
+.main-summary p {
+  margin: 0;
+}
+
+.section-title {
+  display: inline-block;
+  background: #fff;
+  padding: 0 1em 0.3em 0;
+  color: #ff6d1f;
+  text-transform: uppercase;
+  font-weight: 600;
+  border: none;
+  font-size: 0.9rem;
+}
+
+.section > header {
+  position: relative;
+}
+
+.fa {
+  margin-right: 0.25em;
+}
+
+.section > header::after {
+  position: absolute;
+  left: 0;
+  top: 0.7em;
+  height: 1px;
+  background: #ccc;
+  content: "";
+  width: 100%;
+  z-index: -100;
+  display: block;
+}
+
+.section.main-summary > section {
+  margin: 0;
+}
+
+.section > section > header {
+  font-size: 1.38rem;
+  position: relative;
+  margin-top: 0.7em;
+}
+
+.section > section > header:first-of-type {
+  margin: 0;
+}
+
+.section > section > header .space-left {
+  position: absolute;
+  left: -1.56rem;
+  top: 5px;
+  color: #aaa;
+  line-height: 1;
+  opacity: 0;
+}
+
+.position,
+.company,
+.organization,
+.institution,
+.date,
+.area,
+.studyType,
+.title,
+.awarder {
+  display: inline;
+}
+
+.position,
+.studyType,
+.area,
+.title,
+.language,
+.name {
+  font-weight: 600;
+}
+
+.company::before,
+.institution::before,
+.organization::before,
+.awarder::before {
+  content: "at ";
+}
+
+.company,
+.institution,
+.organization,
+.awarder {
+  color: #606d76;
+  font-weight: 400;
+}
+
+.section header .date {
+  display: block;
+  font-size: 1rem;
+  padding: 0.1em 0;
+  color: #606d76;
+  font-weight: 400;
+}
+
+.keywords,
+.courses {
+  margin: 0.5em 0;
+}
+
+.keywords li,
+.courses li {
+  display: inline-block;
+  margin: 2px 2px 2px 0;
+  padding: 4px 5px 5px;
+  font-size: 0.9rem;
+  line-height: 1;
+  color: #3e6d8e;
+  background-color: #dfeaf1;
+  border: 0 solid #dfeaf1;
+  white-space: nowrap;
+}
+
+.keywords li:hover,
+.courses li:hover {
+  background: #dfeaf0;
+}
+
+.highlights {
+  margin: 1em 0 0 0;
+}
+
+.highlights > li > p {
+  margin-bottom: 0.5em;
+}
+
+.item {
+  overflow: hidden;
+}
+
+.gpa {
+  clear: both;
+  padding-bottom: 0.5em;
+}
+
+.fa.social {
+  font-size: 1.1em;
+}
+
+/* Social Media Brand Colors */
+
+.google-plus {
+  color: #dd4b39;
+}
+
+.tumblr {
+  color: #32506d;
+}
+
+.foursquare {
+  color: #0072b1;
+}
+
+.facebook {
+  color: #3b5998;
+}
+
+.linkedin {
+  color: #007bb6;
+}
+
+.pinterest {
+  color: #cb2027;
+}
+
+.dribbble {
+  color: #ea4c89;
+}
+
+.instagram {
+  color: #517fa4;
+}
+
+.twitter {
+  color: #00aced;
+}
+
+.soundcloud {
+  color: #ff3a00;
+}
+
+.wordpress {
+  color: #21759b;
+}
+
+.youtube {
+  color: #bb0000;
+}
+
+.github {
+  color: #171515;
+}
+
+.stack-overflow {
+  color: #828386;
+  position: relative;
+}
+
+.flickr {
+  color: #ff0084;
+}
+
+.reddit {
+  color: #ff4500;
+}
+
+.hacker-news {
+  color: #ff6600;
+}
+
+.stack-overflow::after {
+  position: absolute;
+  left: 0;
+  content: "\f16c";
+  color: #f68a1f;
+  overflow: hidden;
+  height: 100%;
+}
+
+.telegram {
+  color: #2291c3;
+}
+
+#languages .item,
+#skills .item,
+#interests .item {
+  width: 15em;
+  padding: 0 0.5em 0.5em 0;
+  border-bottom: none;
+}
+
+#skills .item {
+  width: 16em;
+}
+
+#skills .item .keywords {
+  width: 15em;
+}
+
+/* Skill chart */
+
+.level {
+  margin-bottom: 0.5em;
+}
+
+.level em {
+  padding-left: 0.2em;
+}
+
+.level .bar {
+  border: 1px solid #ddd;
+  display: block;
+  width: 10em;
+  height: 5px;
+  position: relative;
+}
+
+.level .bar::after {
+  position: absolute;
+  content: " ";
+  top: 0;
+  left: 0;
+  background: black;
+  height: 5px;
+}
+
+.level.beginner .bar::after,
+.level.basique .bar::after,
+.level.niveau-a1 .bar::after,
+.level.niveau-a2 .bar::after {
+  background: #51e6eb;
+  width: 2.5em;
+}
+
+.level.intermediate .bar::after,
+.level.confirmé .bar::after,
+.level.niveau-b1 .bar::after,
+.level.niveau-b2 .bar::after {
+  background: #1d93f3;
+  width: 5em;
+}
+
+.level.advanced .bar::after,
+.level.fluent .bar::after,
+.level.expert .bar::after,
+.level.niveau-c1 .bar::after,
+.level.niveau-c2 .bar::after {
+  background: #5cb85c;
+  width: 7.5em;
+}
+
+.level.master .bar::after,
+.level.native.speaker .bar::after,
+.level.senior .bar::after,
+.level.langue-maternelle .bar::after {
+  background: #59c596;
+  width: 10em;
+}
+
+#references .item {
+  padding-left: 0.5em;
+  margin-bottom: 1em;
+  border-left: 5px solid #ff6d1f;
+}
+
+.section > section > section {
+  margin-bottom: 1rem;
+}
+
+/******************
+*	HELPER CLASSES
+******************/
+
+.clear::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.display {
+  display: block;
+  opacity: 1 !important;
+}
+
+/****************
+*		TABLET
+****************/
+
+@media screen and (min-width: 602px) {
+  #resume {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .section header .date {
+    float: right;
+    font-weight: 600;
+    color: #000;
+  }
+}
+
+/****************
+*		LAPTOP
+****************/
+
+@media screen and (min-width: 1025px) {
+  li {
+    margin-left: 1.5em;
+  }
+  #resume {
+    width: 820px;
+    margin: 2rem auto;
+  }
+  .section > section > header .space-left {
+    opacity: 1;
+    cursor: pointer;
+  }
+  .section > section:not(.main-summary) {
+    margin-left: 1.67rem;
+  }
+  .company::before,
+  .institution::before,
+  .organization::before,
+  .awarder::before {
+    content: "| ";
+  }
+  .header-left {
+    float: left;
+    width: 70%;
+    word-break: normal;
+  }
+  .section header .date {
+    padding: 0.2em;
+  }
+  .display {
+    display: none;
+  }
+  .display:not(.none) {
+    display: block;
+  }
+}
+
+@media print {
+  #profiles a:not(.hide-href-print)::after{
+    content: " (" attr(href) ") ";
+  }
+  #profiles .url .show-only-url-print {
+    display: none;
+  }
+  #profiles .url a::after {
+    content: attr(href);
+  }
+  #resume {
+    margin: 0.1em;
+    padding: 0.1em;
+    -ms-word-wrap: break-word;
+    word-wrap: break-word;
+    line-height: 1.25;
+  }
+  @page {
+    margin: 1cm 1.4cm;
+  }
+  .item-count {
+    display: none;
+  }
+  .company a {
+    color: #40484f;
+  }
+  .company::before,
+  .institution::before,
+  .organization::before,
+  .awarder::before {
+    content: "at ";
+  }
+  .main-summary {
+    padding: 0;
+    background: transparent;
+  }
+  .section {
+    margin: 0.8rem 0;
+    padding: 0;
+  }
+  .section header {
+    padding-bottom: 0.15rem;
+  }
+  .section .location {
+    padding-bottom: 0.15rem;
+  }
+  .section > section > section {
+    border-bottom: 1px solid #fdfdfd;
+    margin: .5em 0;
+  }
+  .section > section > section:last-of-type {
+    margin: 0;
+  }
+  .stack-overflow::after {
+    content: "";
+  }
+  .fa.social {
+    color: #828386;
+  }
+  ul {
+    margin-top: 0.4em;
+  }
+  ul,
+  li {
+    padding: 0;
+  }
+  ul.keywords li,
+  ul.courses li {
+    margin: 0;
+    padding: 0;
+    font-size: 0.8rem;
+    background: transparent;
+  }
+  ul.keywords li::after,
+  ul.courses li::after {
+    padding: 0 0 0 0.1rem;
+    content: ", ";
+  }
+  ul.keywords::before,
+  ul.courses::before {
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+  #skills .item {
+    display: flex;
+    flex-direction: column;
+    margin: 0.3rem 0;
+    padding: 0;
+  }
+  #skills .level {
+    margin: 0.1rem 0;
+    font-weight: 400;
+  }
+  #skills .keywords {
+    font-size: 0.9rem;
+    margin: 0;
+  }
+  .highlights {
+    margin: 0.5em 0 0 0;
+  }
+  .highlights > li > p {
+    margin-bottom: 0.3em;
+  }
+  ul.keywords::before {
+    content: "Skills: ";
+    font-size: 1rem;
+  }
+  #skills .keywords::before {
+    content: none;
+  }
+  .section p {
+    margin: 0;
+    padding: 0;
+  }
+  ul.courses::before {
+    content: "Major courses: ";
+    font-size: 1rem;
+  }
+  ul.keywords li,
+  ul.courses li {
+    font-size: 1rem;
+    line-height: inherit;
+  }
+  ul.keywords li:last-of-type::after,
+  ul.courses li:last-of-type::after {
+    content: "";
+  }
+  .level em {
+    font-style: normal;
+    padding: 0.1em 0;
+  }
+  .level .bar {
+    display: none;
+  }
+  #profiles .item {
+    padding: 0;
+  }
+  .item.display {
+    display: block;
+    opacity: 1 !important;
+  }
+  .fa-location-dot:before {
+    padding-left: 0.1em;
+  }
+}
+
+    </style>
+  </head>
+  <body>
+    <div id="resume">
+      	<header id="header" class="clear">
+      		<img class="image" src="https://avatars.githubusercontent.com/u/895661?v&#x3D;4" alt="Kévin DUBUC" />
+      		<div class="middle">
+      			<h1 class="name">Kévin DUBUC</h1>
+      			<h2 class="label">Ingénieur Logiciel &amp; Plateforme</h2>
+      		</div>
+      
+      		<span class="location">
+      			<span class="city">Arras, Pas-de-Calais,</span>
+      			<span class="countryCode">(FR)</span>
+      		</span>
+      
+      
+      		<div id="contact">
+      			<div class="email">
+      				<span class="fa-regular fa-envelope"></span>
+      				<a class="hide-href-print" href="mailto:kevindubuc62@gmail.com">kevindubuc62@gmail.com</a>
+      			</div>
+      			<div class="phone">
+      				<span class="fa-solid fa-mobile-screen-button"></span>
+      				<a class="hide-href-print" href="tel:+33619122049">+33619122049</a>
+      			</div>
+      		</div>
+      
+      		<div id="profiles">
+      			<div class="item">
+      				<div class="username">
+      					<span class="fa-brands fa-bluesky bluesky social"></span>
+      					<span class="url">
+      						<a target="_blank" href="https://bsky.app/profile/kevindubuc.bsky.social"><span class="show-only-url-print">kevindubuc.bsky.social</span></a>
+      					</span>
+      				</div>
+      			</div>
+      			<div class="item">
+      				<div class="username">
+      					<span class="fa-brands fa-github github social"></span>
+      					<span class="url">
+      						<a target="_blank" href="https://github.com/kdubuc"><span class="show-only-url-print">kdubuc</span></a>
+      					</span>
+      				</div>
+      			</div>
+      		</div>
+      	</header>
+      
+      	<section class="section summary">
+          <header>
+            <h2 class="section-title">Présentation</h2>
+          </header>
+      		<section class="main-summary">
+      			<div><p><p>Je suis ingénieur logiciel et plateforme et je peux construire des Applications Cloud depuis zéro depuis la conception de l'architecture à la gestion du déploiement, puis au maintien en condition opérationnelle. Très polyvalent et curieux de nature, je suis habitué à m'adapter à différents rôles. En tant qu’ingénieur Agile, je me concentre sur les produits et les plateformes qui les soutiennent, en mettant l'accent sur la sécurité et les retours des utilisateurs terrain. Je reste généralement très flexible quand il s'agit d'explorer de nouveaux rôles.</p></p></div>
+      		</section>
+      	</section>
+      
+      <section class="section">
+        <header>
+          <h2 class='section-title'>Compétences</h2>
+        </header>
+        <section id="skills">
+          <div class="item">
+            <h3 class="name">
+              Backend
+            </h3>
+              <div class="level senior">
+                  <em>Senior</em>
+                <div class="bar"></div>
+              </div>
+            <ul class="keywords">
+              <li>Node.js</li>
+              <li>PHP</li>
+              <li>Python</li>
+              <li>Go</li>
+              <li>Lua</li>
+              <li>Java</li>
+              <li>Postgres</li>
+              <li>MongoDB</li>
+              <li>Serverless</li>
+            </ul>
+          </div>
+          <div class="item">
+            <h3 class="name">
+              Cybersécurité
+            </h3>
+              <div class="level expert">
+                  <em>Expert</em>
+                <div class="bar"></div>
+              </div>
+            <ul class="keywords">
+              <li>WAF</li>
+              <li>API Gateway</li>
+              <li>OWASP</li>
+              <li>SAST/DAST</li>
+              <li>PRA / Chaos engineering</li>
+            </ul>
+          </div>
+          <div class="item">
+            <h3 class="name">
+              Normes et réglementations
+            </h3>
+              <div class="level confirmé">
+                  <em>Confirmé</em>
+                <div class="bar"></div>
+              </div>
+            <ul class="keywords">
+              <li>RGPD</li>
+              <li>DSA / DMA</li>
+            </ul>
+          </div>
+          <div class="item">
+            <h3 class="name">
+              Frontend
+            </h3>
+              <div class="level senior">
+                  <em>Senior</em>
+                <div class="bar"></div>
+              </div>
+            <ul class="keywords">
+              <li>HTML / Angular Template</li>
+              <li>SCSS / CSS / Responsive Design</li>
+              <li>Javascript / Typescript</li>
+              <li>Bootstrap</li>
+              <li>Angular</li>
+              <li>Component-based Architecture</li>
+            </ul>
+          </div>
+          <div class="item">
+            <h3 class="name">
+              Software Design Architecture
+            </h3>
+              <div class="level senior">
+                  <em>Senior</em>
+                <div class="bar"></div>
+              </div>
+            <ul class="keywords">
+              <li>Design Principles</li>
+              <li>Architectural Patterns</li>
+              <li>DDD - Domain Driven Design</li>
+              <li>CQRS</li>
+              <li>Event Sourcing</li>
+              <li>Enterprise Patterns</li>
+            </ul>
+          </div>
+          <div class="item">
+            <h3 class="name">
+              DevSecOps
+            </h3>
+              <div class="level senior">
+                  <em>Senior</em>
+                <div class="bar"></div>
+              </div>
+            <ul class="keywords">
+              <li>Workflow et Pipeline CI/CD</li>
+              <li>Collaboration / Agilité</li>
+              <li>Securité et Compliance </li>
+              <li>Automatisation</li>
+              <li>Conteneurs et microservices</li>
+              <li>Tests Shift Left et Shift Right</li>
+              <li>Monitoring Grafana</li>
+            </ul>
+          </div>
+          <div class="item">
+            <h3 class="name">
+              Cloud
+            </h3>
+              <div class="level senior">
+                  <em>Senior</em>
+                <div class="bar"></div>
+              </div>
+            <ul class="keywords">
+              <li>Scaleway Cloud Provider</li>
+              <li>Serverless</li>
+              <li>Docker</li>
+              <li>DNS</li>
+              <li>Microservices</li>
+              <li>API Gateway Management</li>
+              <li>Load Balancing</li>
+            </ul>
+          </div>
+          <div class="item">
+            <h3 class="name">
+              API Design
+            </h3>
+              <div class="level senior">
+                  <em>Senior</em>
+                <div class="bar"></div>
+              </div>
+            <ul class="keywords">
+              <li>REST(ful) API</li>
+              <li>Gouvernance &amp; Guidelines</li>
+              <li>OpenAPI</li>
+            </ul>
+          </div>
+          <div class="item">
+            <h3 class="name">
+              Database Management
+            </h3>
+              <div class="level expert">
+                  <em>Expert</em>
+                <div class="bar"></div>
+              </div>
+            <ul class="keywords">
+              <li>PostgreSQL</li>
+              <li>MongoDB</li>
+              <li>Redis</li>
+              <li>Event Store</li>
+            </ul>
+          </div>
+          <div class="item">
+            <h3 class="name">
+              Documentation et Communication
+            </h3>
+              <div class="level expert">
+                  <em>Expert</em>
+                <div class="bar"></div>
+              </div>
+            <ul class="keywords">
+              <li>Markdown</li>
+              <li>GitHub</li>
+              <li>Teams</li>
+            </ul>
+          </div>
+          <div class="item">
+            <h3 class="name">
+              Blog Content Management
+            </h3>
+              <div class="level senior">
+                  <em>Senior</em>
+                <div class="bar"></div>
+              </div>
+            <ul class="keywords">
+              <li>Markdown</li>
+              <li>Liquid</li>
+              <li>JSON</li>
+              <li>Eleventy</li>
+            </ul>
+          </div>
+          <div class="item">
+            <h3 class="name">
+              AI
+            </h3>
+              <div class="level basique">
+                  <em>Basique</em>
+                <div class="bar"></div>
+              </div>
+            <ul class="keywords">
+              <li>Scaleway AI API</li>
+              <li>Intégration d&#x27;un modèle de langage</li>
+            </ul>
+          </div>
+          <div class="item">
+            <h3 class="name">
+              Version Control
+            </h3>
+              <div class="level confirmé">
+                  <em>Confirmé</em>
+                <div class="bar"></div>
+              </div>
+            <ul class="keywords">
+              <li>GitHub</li>
+              <li>Git</li>
+            </ul>
+          </div>
+          <div class="item">
+            <h3 class="name">
+              Identity Access Management
+            </h3>
+              <div class="level expert">
+                  <em>Expert</em>
+                <div class="bar"></div>
+              </div>
+            <ul class="keywords">
+              <li>Keycloak</li>
+              <li>OAuth2</li>
+              <li>OIDC</li>
+              <li>JWT</li>
+            </ul>
+          </div>
+        </section>
+      </section>
+      <section class="section">
+        <header>
+          <h2 class='section-title'>Expériences <span class="item-count">(1)</span></h2>
+        </header>
+      
+        <section id="work">
+          <section class="work-item">
+              <label for="work-item-0"></label>
+              <header class="clear">
+                  <div class="date">
+                    <span class="startDate">oct. 2012</span>
+                      <span class="endDate">- Actuel</span>
+                  </div>
+                <div class="position">Responsable de service Recherche et Développement</div>
+                  <div class="company">SDIS du Pas-de-Calais</div>
+              </header>
+             <div class="item" id="work-item">
+              <div class="summary"><p><p>Au cours des dernières années, j'ai occupé divers postes et missions, en me consacrant au développement produit full stack. J'ai également été associé dans la gestion de projets informatique, ainsi que dans la mise en place de la stratégie numérique et sécurité du SDIS du Pas-de-Calais.</p></p></div>
+              <ul class="highlights">
+                <li><p><p>Développement d'applications web et mobiles pour le SDIS du Pas-de-Calais.</p></p></li>
+                <li><p><p>Mise en place de la stratégie de développement produit et de la gouvernance des API.</p></p></li>
+                <li><p><p>Construction d'une infrastructure cloud pour le déploiement et l'exposition des applications en microservices sécurisés.</p></p></li>
+                <li><p><p>Pilotage de projets de recherche et développement en lien avec les besoins opérationnels.</p></p></li>
+                <li><p><p>Gestion de l'équipe de développement et des projets de recherche et développement.</p></p></li>
+                <li><p><p>Collaboration avec les équipes opérationnelles pour comprendre leurs besoins et y répondre par des solutions techniques adaptées.</p></p></li>
+                <li><p><p>Mise en place de la stratégie de sécurité des applications et de la conformité aux normes en vigueur.</p></p></li>
+              </ul>
+            </div>
+          </section>
+        </section>
+      </section>
+      <section class="section">
+        <header>
+          <h2 class='section-title'>Projets <span class="item-count">(5)</span></h2>
+        </header>
+        <section id="projects">
+          <section class="project-item">
+            <header class="clear">
+                <div class="date">
+                  <span class="startDate">janv. 2022</span>
+                    <span class="endDate">- Actuel</span>
+                </div>
+              <div class="position">Metarisc</div>
+            </header>
+            <span class="website">
+              <span class="fa-solid fa-up-right-from-square"></span>
+              <a target="_blank" href="https://www.metarisc.fr">https://www.metarisc.fr</a>
+            </span>
+            <div class="item">
+                <div class="summary"><p><p>Développement d'une Plateforme Cloud pour la gestion des risques dans un SDIS.</p></p></div>
+              <ul class="highlights">
+                  <li><p><p>Développement d'une API REST (approche API first) intégralement documentée.</p></p></li>
+                  <li><p><p>Web Application Firewall Imperva pour la sécurité de l'API.</p></p></li>
+                  <li><p><p>Fait l'objet d'un audit de sécurité par un cabinet externe.</p></p></li>
+                  <li><p><p>Pipeline CI/CD entièrement automatisée autour des Github Actions.</p></p></li>
+                  <li><p><p>Création de SDK automatisés pour l'utilisation de l'API par des clients tiers.</p></p></li>
+                  <li><p><p>Gestion d'un Keycloak SaaS avec Cloud-IAM pour l'authentification et l'autorisation des utilisateurs.</p></p></li>
+                  <li><p><p>Travaux autour de la gouvernance de l'API (développement, pratiques de sécurité, etc ...).</p></p></li>
+                  <li><p><p>Intégration de vérifications de sécurité (SAST/DAST) dans le pipeline CI/CD.</p></p></li>
+                  <li><p><p>Création d'un moteur de génération des spécifications OpenAPI (approche Design First).</p></p></li>
+                  <li><p><p>Mise en place d'une API Gateway Kong pour la gestion des accès et la sécurité.</p></p></li>
+                  <li><p><p>Architecture Serverless avec Scaleway Container.</p></p></li>
+                  <li><p><p>Gestion de la conformité avec le RGPD et la sécurité des données.</p></p></li>
+                  <li><p><p>Architecture Event Driven avec un Event Store pour la gestion des événements.</p></p></li>
+              </ul>
+            </div>
+          </section>
+          <section class="project-item">
+            <header class="clear">
+                <div class="date">
+                  <span class="startDate">janv. 2023</span>
+                    <span class="endDate">- déc. 2023</span>
+                </div>
+              <div class="position">SDI - Schéma Directeur Informatique</div>
+            </header>
+            <div class="item">
+                <div class="summary"><p><p>Travaux de réflexion autour de l'urbanisation des systèmes d'information et de la stratégie numérique et sécurité du SDIS du Pas-de-Calais dans le cadre de la mise en place d'un plan Pluriannuel d'Investissement.</p></p></div>
+              <ul class="highlights">
+                  <li><p><p>Rédaction d'un schéma directeur informatique pour le SDIS du Pas-de-Calais.</p></p></li>
+                  <li><p><p>Proposition d'une stratégie numérique et sécurité pour le SDIS du Pas-de-Calais.</p></p></li>
+                  <li><p><p>Proposition d'un plan pluriannuel d'investissement pour le SDIS du Pas-de-Calais.</p></p></li>
+              </ul>
+            </div>
+          </section>
+          <section class="project-item">
+            <header class="clear">
+                <div class="date">
+                  <span class="startDate">janv. 2022</span>
+                    <span class="endDate">- janv. 2023</span>
+                </div>
+              <div class="position">DiGEIDE - Gestion Electronique de l’Information et des Documents de l’Etablissement</div>
+            </header>
+            <div class="item">
+                <div class="summary"><p><p>Audit global autour de la dématérialisation des documents et de la gestion électronique de l’information à travers l'urbanisation des systèmes d'information.</p></p></div>
+              <ul class="highlights">
+                  <li><p><p>Cadrage et audit de l'existant.</p></p></li>
+                  <li><p><p>Animation de la réflexion autour de la dématérialisation des documents avec les référents métiers.</p></p></li>
+                  <li><p><p>Proposition d'une solution de GED et de gouvernance autour de la dématérialisation des documents.</p></p></li>
+                  <li><p><p>Approche de partenaires technologiques (Blueway - Bus de données, Soluqiq - logiciel de cartographie, etc ...).</p></p></li>
+                  <li><p><p>Rédaction d'un rapport d'audit et de préconisations pour l'établissement.</p></p></li>
+              </ul>
+            </div>
+          </section>
+          <section class="project-item">
+            <header class="clear">
+                <div class="date">
+                  <span class="startDate">janv. 2014</span>
+                    <span class="endDate">- janv. 2020</span>
+                </div>
+              <div class="position">MobilCOS</div>
+            </header>
+            <span class="website">
+              <span class="fa-solid fa-up-right-from-square"></span>
+              <a target="_blank" href="https://www.mobilcos.fr">https://www.mobilcos.fr</a>
+            </span>
+            <div class="item">
+                <div class="summary"><p><p>Développement d'une application mobile pour la gestion des interventions sur le terrain.</p></p></div>
+              <ul class="highlights">
+                  <li><p><p>Développement d'une API REST pour la gestion des interventions.</p></p></li>
+                  <li><p><p>Gestion d'un Keycloak On-Premise pour l'authentification et l'autorisation des utilisateurs.</p></p></li>
+                  <li><p><p>Intégration d'un système de notification en temps réel pour les équipes opérationnelles.</p></p></li>
+                  <li><p><p>Développement d'une application mobile multiplateforme avec Angular / Ionic.</p></p></li>
+                  <li><p><p>Intégration de fonctionnalités de géolocalisation et de cartographie.</p></p></li>
+                  <li><p><p>Création d'une suite logicielle pour la gestion des interventions, incluant une console d'administration, une application TV, une application embarquée pour véhicule.</p></p></li>
+              </ul>
+            </div>
+          </section>
+          <section class="project-item">
+            <header class="clear">
+                <div class="date">
+                  <span class="startDate">janv. 2012</span>
+                    <span class="endDate">- janv. 2016</span>
+                </div>
+              <div class="position">Prevarisc</div>
+            </header>
+            <span class="website">
+              <span class="fa-solid fa-up-right-from-square"></span>
+              <a target="_blank" href="https://sdis62.github.io/prevarisc">https://sdis62.github.io/prevarisc</a>
+            </span>
+            <div class="item">
+                <div class="summary"><p><p>Développement d'une application métier pour la gestion du service Prévention des risques.</p></p></div>
+              <ul class="highlights">
+                  <li><p><p>Développement d'une application pour la gestion des Établissements Recevant du Public.</p></p></li>
+                  <li><p><p>Animation des sessions de formations nationales pour les utilisateurs.</p></p></li>
+                  <li><p><p>Zend / PHP / MySQL</p></p></li>
+              </ul>
+            </div>
+          </section>
+        </section>
+      </section>
+      <section class="section">
+        <header>
+          <h2 class='section-title'>Bénévolat</h2>
+        </header>
+        <section id="volunteer">
+          <section class="volunteer-item">
+      
+            <label for="volunteer-item-0"></label>
+      
+            <header class="clear">
+                <div class="date">
+                  <span class="startDate">juil. 2011</span>
+                    <span class="endDate">- Actuel</span>
+                </div>
+              <div class="header-left">
+                <div class="position">
+                  Contributeur
+                </div>
+                <div class="organization">
+                  Projets Open Source
+                </div>
+              </div>
+             
+            </header>
+            <div class="item">
+              <div class="summary"><p><p>Contribuer à des projets open source pour améliorer la qualité des logiciels.</p></p></div>
+              <ul class="highlights">
+                <li><p><p>Corrigé des bugs critiques et ajouté de nouvelles fonctionnalités sur de nombreux projets.</p></p></li>
+              </ul>
+            </div>
+          </section>
+          <section class="volunteer-item">
+      
+            <label for="volunteer-item-1"></label>
+      
+            <header class="clear">
+                <div class="date">
+                  <span class="startDate">sept. 2021</span>
+                    <span class="endDate">- Actuel</span>
+                </div>
+              <div class="header-left">
+                <div class="position">
+                  Vice Président (2021 - 2024), Président (2024 - aujourd&#x27;hui)
+                </div>
+                <div class="organization">
+                  Association des Parents d&#x27;Élèves
+                </div>
+              </div>
+             
+            </header>
+            <div class="item">
+              <div class="summary"><p><p>Présider une association partie prenante dans la communauté scolaire.</p></p></div>
+              <ul class="highlights">
+                <li><p><p>Organisé des événements pour les élèves et les parents (Bourse aux jouets, Fête de l'école, etc.)</p></p></li>
+                <li><p><p>Collaboré avec l'administration scolaire pour contribuer au projet pédagogique de l'école.</p></p></li>
+              </ul>
+            </div>
+          </section>
+        </section>
+      </section>
+      <section class="section">
+        <header>
+          <h2 class='section-title'>Diplômes <span class="item-count">(3)</span></h2>
+        </header>
+      
+        <section id="education">
+          <section class="education-item">
+            <header class="clear">
+                <div class="date">
+                  <span class="startDate">sept. 2009</span>
+                    <span class="endDate">- juil. 2012</span>
+                </div>
+              <div class="header-left">
+                <div class="studyType">
+                  Titre d&#x27;expert d&#x27;ingénierie informatique, niveau 7 RNCP
+                </div>
+                <div class="area">
+                  Master en informatique et système d&#x27;information, spécialité génie logiciel
+                </div>
+                <div class="institution">
+                  École de l&#x27;ingénierie informatique EPSI, Arras
+                </div>
+              </div>
+            </header>
+      
+      
+      
+            <div class="item">
+            </div>
+          </section>
+          <section class="education-item">
+            <header class="clear">
+                <div class="date">
+                  <span class="startDate">sept. 2007</span>
+                    <span class="endDate">- juil. 2009</span>
+                </div>
+              <div class="header-left">
+                <div class="studyType">
+                  Diplôme universitaire de technologie, niveau 5 RNCP
+                </div>
+                <div class="area">
+                  DUT Informatique
+                </div>
+                <div class="institution">
+                  Lycée Guy Mollet, Arras
+                </div>
+              </div>
+            </header>
+      
+      
+      
+            <div class="item">
+            </div>
+          </section>
+          <section class="education-item">
+            <header class="clear">
+                <div class="date">
+                  <span class="startDate">sept. 2004</span>
+                    <span class="endDate">- avr. 2007</span>
+                </div>
+              <div class="header-left">
+                <div class="studyType">
+                  Baccalauréat, niveau 4 RNCP
+                </div>
+                <div class="area">
+                  Baccalauréat Scientifique
+                </div>
+                <div class="institution">
+                  Lycée Guy Mollet, Arras
+                </div>
+              </div>
+            </header>
+      
+      
+      
+            <div class="item">
+            </div>
+          </section>
+        </section>
+      </section>
+        <section class="section">
+          <header>
+            <h2 class="section-title">Récompenses <span class="item-count">(1)</span></h2>
+          </header>
+          <section id="awards">
+              <section class="award-item">
+                  <label for="award-item-0"></label>
+      
+                <header class="clear">
+                    <div class="date">
+                      juin 2012
+                    </div>
+                  <div class="header-left">
+                      <div class="title">
+                        Prix ENSOSP 2012 - Accessit de l&#x27;Innovation catégorie Opérationnel
+                      </div>
+                      <div class="awarder">
+                        ENSOSP
+                      </div>
+                  </div>
+                </header>
+      
+                <div class="item">
+                    <div class="summary"><p><p>Création d'applications interactives sur smartphone afin d'améliorer la chaîne de commandement lors d'intervention des sapeurs-pompiers.</p></p></div>
+                </div>
+              </section>
+          </section>
+        </section>
+      <section class="section">
+        <header>
+          <h2 class='section-title'>Langues <span class="item-count">(3)</span></h2>
+        </header>
+        <section id="languages">
+          <div class="display">
+            <h3 class="language">
+              Français
+            </h3>
+            <div class="item">
+              <div class="level fluency langue-maternelle">
+                <em>Langue maternelle</em>
+                <div class="bar"></div>
+              </div>
+            </div>
+          </div>
+          <div class="display">
+            <h3 class="language">
+              Anglais technique
+            </h3>
+            <div class="item">
+              <div class="level fluency niveau-c1">
+                <em>Niveau C1</em>
+                <div class="bar"></div>
+              </div>
+            </div>
+          </div>
+          <div class="display">
+            <h3 class="language">
+              Anglais
+            </h3>
+            <div class="item">
+              <div class="level fluency niveau-b1">
+                <em>Niveau B1</em>
+                <div class="bar"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </section>
+      <section class="section">
+        <header>
+          <h2 class='section-title'>Intérêts <span class="item-count">(3)</span></h2>
+        </header>
+        <section id="interests">
+          <div class="item">
+            <h3 class="name">
+              Comprendre le monde qui m&#x27;entoure
+            </h3>
+            <ul class="keywords">
+              <li>Apprécier un système complexe</li>
+              <li>Optimiser pour rendre plus simples</li>
+              <li>Comprendre les interactions</li>
+            </ul>
+          </div>
+          <div class="item">
+            <h3 class="name">
+              Littérature
+            </h3>
+            <ul class="keywords">
+              <li>Lire</li>
+              <li>&quot;Gagner la guerre&quot; - JP Jaworski</li>
+              <li>RFC - Request For Comments</li>
+              <li>https://leanpub.com</li>
+            </ul>
+          </div>
+          <div class="item">
+            <h3 class="name">
+              Open Source
+            </h3>
+            <ul class="keywords">
+              <li>Tout ce qui en fait partie</li>
+            </ul>
+          </div>
+        </section>
+      </section>
+    </div>
+  </body>
+</html>
